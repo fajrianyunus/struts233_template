@@ -21,12 +21,22 @@
 
 package com.fajrianyunus.on_mc.example;
 
+import javax.sql.DataSource;
+
 /**
  * <code>Set welcome message.</code>
  */
 public class HelloWorld extends ExampleSupport {
+	
+	private EmployeeDAO employeeDao;
+	private DataSource dataSource;
 
     public String execute() throws Exception {
+    	Employee em = new Employee();
+    	em.setFullName("john doe");
+    	em.setWage(9999D);
+    	employeeDao.saveEmployee(em);
+    	
         setMessage(getText(MESSAGE));
         return SUCCESS;
     }
@@ -58,4 +68,20 @@ public class HelloWorld extends ExampleSupport {
     public void setMessage(String message) {
         this.message = message;
     }
+
+	public EmployeeDAO getEmployeeDao() {
+		return employeeDao;
+	}
+
+	public void setEmployeeDao(EmployeeDAO employeeDao) {
+		this.employeeDao = employeeDao;
+	}
+
+	public DataSource getDataSource() {
+		return dataSource;
+	}
+
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
 }
