@@ -10,6 +10,8 @@
 
     <properties>
         <struts2.version>2.3.3</struts2.version>
+        <spring.version>3.1.1.RELEASE</spring.version>
+        <hibernate.version>4.1.4.Final</hibernate.version>
     </properties>
 
     <dependencies>
@@ -69,13 +71,13 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.1.4.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.1.4.Final</version>
+			<version>${hibernate.version}</version>
 		</dependency>		
 		
 		<dependency>
@@ -99,55 +101,55 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		            
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>		
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>	
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>	
 		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<version>${spring.version}</version>
 		</dependency>				
 
     </dependencies>
