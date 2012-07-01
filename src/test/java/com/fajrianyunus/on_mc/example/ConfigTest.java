@@ -21,6 +21,7 @@
 
 package com.fajrianyunus.on_mc.example;
 
+import com.fajrianyunus.on_mc.test.StrutsSpringTestCaseExpanded;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.config.RuntimeConfiguration;
 import com.opensymphony.xwork2.config.entities.ActionConfig;
@@ -30,9 +31,10 @@ import com.opensymphony.xwork2.config.providers.XmlConfigurationProvider;
 import java.util.Map;
 import java.util.List;
 
+import org.apache.struts2.StrutsSpringTestCase;
 import org.apache.struts2.StrutsTestCase;
 
-public class ConfigTest extends StrutsTestCase {
+public class ConfigTest extends StrutsSpringTestCaseExpanded {
 
     protected void assertSuccess(String result) throws Exception {
         assertTrue("Expected a success result!",

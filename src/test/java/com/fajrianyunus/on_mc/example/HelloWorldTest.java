@@ -21,17 +21,18 @@
 
 package com.fajrianyunus.on_mc.example;
 
-import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.StrutsTestCase;
+import com.fajrianyunus.on_mc.test.StrutsSpringTestCaseExpanded;
+import com.opensymphony.xwork2.ActionProxy;
 
-public class HelloWorldTest extends StrutsTestCase {
+import org.junit.Test;
 
+
+public class HelloWorldTest extends StrutsSpringTestCaseExpanded {
+
+	@Test
     public void testHelloWorld() throws Exception {
-        HelloWorld hello_world = new HelloWorld();
-        String result = hello_world.execute();
-        assertTrue("Expected a success result!",
-                ActionSupport.SUCCESS.equals(result));
-        assertTrue("Expected the default message!",
-                hello_world.getText(HelloWorld.MESSAGE).equals(hello_world.getMessage()));
+    	ActionProxy proxy = getActionProxy("/example/HelloWorld");
+    	String result = proxy.getInvocation().invoke();
+    	assertNotNull(result);
     }
 }
